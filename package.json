@@ -1,0 +1,11 @@
+{
+  "name": "mobyflip",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^4.0.7",
+    "spectre.css": "^0.5.8"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.7.2"
+  }
+}
