@@ -1,0 +1,31 @@
+<h3><%= @captain.name %></h3>
+
+<h4>Dashboard Features</h4>
+
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "toast toast-#{name}" %>
+<% end -%>
+
+<table>
+  <% @features.each do |feature, details| %>
+    <tr>
+      <td width="25%">
+        <%= details[:data]["name"] || feature.to_s %>
+      </td>
+      <td>
+        <%= form_for :features, url: flip_feature_admin_captain_path(@captain), method: :post, html: {class: 'm-0'} do |f| %>
+          <label class="form-switch">
+            <%= f.check_box feature, {onchange: 'this.form.submit();', checked: details[:status] } %>
+            <i class="form-icon"></i>
+          </label>
+
+        <% end %>
+      </td>
+      <td>
+        <small>
+          <%= details[:data]["description"] %>
+        </small>
+      </td>
+    </tr>
+  <% end %>
+</table>

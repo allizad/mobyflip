@@ -1,0 +1,11 @@
+<h2>Captains</h2>
+
+list of captains
+
+<ul>
+  <% @captains.each do |captain| %>
+    <li>
+      <%= link_to captain.name, admin_captain_path(captain) %>
+    </li>
+  <% end %>
+</ul>

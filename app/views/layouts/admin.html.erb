@@ -10,6 +10,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'common/header_admin' %>
+    <div class="pad"></div>
+    <div class="container">
+      <div class="column col-10 col-mx-auto">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

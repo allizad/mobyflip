@@ -5,25 +5,26 @@ ruby '2.6.3' # rails 5 needs at least 2.2.2
 
 gem 'rails', '~> 5.2.3' # teh rails
 
-gem 'pg', '0.21.0' # postgres needs no introduction
-gem 'faker'
-
 gem 'puma', '~> 3.11'
 
-gem 'bootstrap-sass'
+# Data
+
+gem 'faker'
+gem 'pg', '0.21.0' # postgres needs no introduction
+gem 'redis', '~> 4.0'
+
+# Assets
+
+gem 'webpacker'#, '~> 3.5'
+gem 'webpacker-react'
 gem 'font-awesome-rails' # social icons and fonts
 gem 'sassc-rails' # C implementation of Sass, for more speed
 gem 'sprockets'
 gem 'sprockets-es6' # remove for sprockets 4.x
 gem 'uglifier'
 gem 'vanilla-ujs'
-
-gem 'webpacker'#, '~> 3.5'
-gem 'webpacker-react'
-
 gem 'turbolinks', '~> 5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

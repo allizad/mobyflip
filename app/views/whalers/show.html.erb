@@ -13,6 +13,9 @@
     <%= @whaler.recruit_score %>
   </div>
   <div class="card-footer">
+    <% if recruitment_activated?(@captain) %>
+    <%# some rails form %>
     <%= link_to 'Add whaler to Pequod', '#', class: 'btn btn-primary' %>
+    <% end %>
   </div>
 </div>

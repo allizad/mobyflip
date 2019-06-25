@@ -9,6 +9,7 @@
 puts 'Seeding the database...'
 
 WHALERS = 20
+CAPTAINS = 5
 
 if Whaler.count < WHALERS
   n = WHALERS - Whaler.count
@@ -20,6 +21,18 @@ if Whaler.count < WHALERS
       strength: Faker::Number.number(2),
       skill: Faker::Number.number(2),
       image_url: Faker::Fillmurray.image,
+      email: Faker::Internet.email
+    )
+  end
+end
+
+if Captain.count < CAPTAINS
+  n = CAPTAINS - Captain.count
+  puts "Creating #{n} Captains..."
+  n.times do
+    Captain.create(
+      name: Faker::Name.name,
+      ship_shares: Faker::Number.number(3),
       email: Faker::Internet.email
     )
   end
