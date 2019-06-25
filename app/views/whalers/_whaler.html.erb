@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <div class="tile tile-centered">
+      <% if whaler_image_activated?(@whaler) %>
+      <div class="tile-icon">
+        <figure class="avatar avatar-xl">
+          <img src="<%= @whaler.image_url %>" alt="...">
+        </figure>
+      </div>
+      <% end %>
+      <div class="tile-content">
+        <h4><%= @whaler.name %></h4>
+      </div>
+    </div>
+
+  </div>
+  <div class="card-body">
+    <h6>Famous last words</h6>
+    <blockquote>
+      <%= @whaler.description %>
+    </blockquote>
+  </div>
+  <div class="card-footer">
+    <%= link_to "Message #{@whaler.email}", "mailto:#{@whaler.email}", class: 'btn btn-default' %>
+  </div>
+</div>

@@ -1,1 +1,5 @@
 @import 'spectre.css/dist/spectre';
+
+.pad {
+  padding: 2em;
+}

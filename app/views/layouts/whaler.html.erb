@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mobyflip</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'common/header' %>
+    <div class="pad"></div>
+    <div class="container">
+      <div class="column col-10 col-mx-auto">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

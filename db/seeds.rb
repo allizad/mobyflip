@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Seeding the database...'
+
+WHALERS = 20
+
+if Whaler.count < WHALERS
+  n = WHALERS - Whaler.count
+  puts "Creating #{n} Whalers..."
+  n.times do
+    Whaler.create(
+      name: Faker::Name.name,
+      description: Faker::Quote.famous_last_words,
+      strength: Faker::Number.number(2),
+      skill: Faker::Number.number(2),
+      image_url: Faker::Fillmurray.image,
+      email: Faker::Internet.email
+    )
+  end
+end

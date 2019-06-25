@@ -1,0 +1,2 @@
+module WhalerHelper
+end

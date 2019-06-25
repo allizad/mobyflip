@@ -1,0 +1,18 @@
+<h1>Whaler Dashboard</h1>
+
+
+<h3>Details</h3>
+<%= render @whaler %>
+
+
+<div class="pad"></div>
+
+<h3>Recruitment Score</h3>
+<div class="card">
+  <div class="card-header">
+    <%= @whaler.recruit_score %>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Add whaler to Pequod', '#', class: 'btn btn-primary' %>
+  </div>
+</div>

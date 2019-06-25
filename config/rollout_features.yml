@@ -1,0 +1,16 @@
+production: &production
+  whaler_image:
+    name: Whaler Image
+    description: View mugshot
+
+  recruit:
+    name: Recruitment Button
+
+staff:
+  <<: *production
+staging:
+  <<: *production
+development:
+  <<: *production
+test:
+  <<: *production
