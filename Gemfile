@@ -5,7 +5,7 @@ ruby '2.6.3' # rails 5 needs at least 2.2.2
 
 gem 'rails', '~> 5.2.3' # teh rails
 
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 
 # Data
 
